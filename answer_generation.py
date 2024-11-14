@@ -2,7 +2,7 @@ import openai
 import os
 
 # Optionally load the API key from environment variables for security
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = os.environ['openai_api_key']
 def generate_answer(query, relevant_chunks):
     # Combine the relevant chunks into a single context
     context = " ".join(relevant_chunks)
