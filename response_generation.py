@@ -1,29 +1,25 @@
 import openai
 import os
 
-# Optionally load the API key from environment variables for security
 openai.api_key = os.environ['openai_api_key']
-def generate_answer(query, relevant_chunks):
-    # Combine the relevant chunks into a single context
+def generate_response(query, relevant_chunks):
+
     context = " ".join(relevant_chunks)
 
-    # Set up the chat messages for the GPT-4 API
     messages = [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": f"Answer the question based on the context below:\n\nContext:\n{context}\n\nQuestion: {query}\nAnswer:"}
     ]
 
-    # Call the OpenAI API to get the answer
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4o-mini",  # Make sure you have access to GPT-4
+            model="gpt-4o-mini",  
             messages=messages,
-            max_tokens=200,  # Set max tokens for the response
-            temperature=0.7,  # Control randomness in output (0 for deterministic)
+            max_tokens=200,  
+            temperature=0.7, 
             logprobs=True
         )
         
-        # Extract and return the generated answer
         answer = response['choices'][0]['message']['content'].strip()
         logprobs = response['choices'][0].get('logprobs', {}).get('top_logprobs', [])
 
