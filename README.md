@@ -11,4 +11,5 @@ This project leverages a Large Language Model (LLM) (OpenAI) to answer user quer
 ## Setup and Installation
 ### Prerequisites
   -Python 3.12
+  
   -OpenAI API Key: You’ll need an OpenAI account and API key to access GPT-4.
