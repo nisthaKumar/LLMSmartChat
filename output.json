@@ -1,0 +1,18 @@
+{
+    "status": "success",
+    "total_questions": 3,
+    "questions_and_answers": [
+        {
+            "question": "What is the name of the company?",
+            "answer": "Zania, Inc."
+        },
+        {
+            "question": "Who is the CEO of the company?",
+            "answer": "The CEO of the company is Shruti Gupta."
+        },
+        {
+            "question": "How many employees are there in this company?",
+            "answer": "Data Not Available"
+        }
+    ]
+}
