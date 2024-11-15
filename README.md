@@ -68,3 +68,23 @@ python src/main.py <pdf_path> <question_1> <question_2> ...
 ```
 python src/main.py docs/handbook.pdf "What is the name of the company?" "Who is the CEO of the company?" "How many employees are there in this company?"
 ```
+## GitHub Actions Workflow
+This project is integrated with GitHub Actions. The workflow can be triggered manually using the workflow_dispatch feature.
+
+### How to Trigger the Workflow Manually
+To manually trigger the workflow, follow these steps:
+
+1. Go to the Actions tab of the repository on GitHub.
+2. In the left sidebar, you will see a list of workflows. Select the workflow you want to trigger (e.g., Run Python script in our case).
+3. Click on the Run workflow button on the right.
+4. Optionally, choose the branch you want to run the workflow on (typically the main branch).
+5. Click Run workflow again to trigger the action.
+
+After triggering the workflow, you can view the results in the Actions tab where you can monitor its progress, check logs, and see if it passes or fails.
+
+### View Workflow Results
+Once the workflow has run (either automatically or manually triggered), you can view the status of the workflow and detailed logs by going to the Actions tab in your GitHub repository.
+
+In the Actions tab, you will see:
+- The workflow runs listed with their status (success, failure, or in-progress).
+- Detailed logs for each step, helping you troubleshoot and monitor the CI/CD pipeline.
