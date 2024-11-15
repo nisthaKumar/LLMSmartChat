@@ -26,7 +26,7 @@ def generate_response(query, relevant_chunks):
         avg_logprob = sum([sum(log) for log in logprobs]) / len(logprobs) if logprobs else 0
         confidence_score = max(avg_logprob, 0)
 
-        low_confidence_threshold = -2.0  # This can be adjusted based on empirical results
+        low_confidence_threshold = -2.0  
         if confidence_score < low_confidence_threshold:
             return "Low confidence answer detected."
         
