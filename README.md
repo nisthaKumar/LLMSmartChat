@@ -42,7 +42,7 @@ This project leverages a Large Language Model (LLM) (OpenAI) to answer user quer
         OPENAI_API_KEY=your_openai_api_key
         ```
 ## Project Structure
-
+```
 LLMSmartChat
 ├── docs
     ├── handbook.pdf            # PDF file to be passed as argument
@@ -54,7 +54,7 @@ LLMSmartChat
     ├── main.py                 # Main script to run the system
 ├── requirements.txt            # List of dependencies
 ├── README.md                   # Project documentation
-
+```
 ## Usage
 ### Running the System
 You can run the LLMSmartChat using the command below, which will process a PDF and answer a list of questions based on its contents:
