@@ -3,8 +3,8 @@ import json
 import logging
 from pdf_processor import read_and_process_pdf
 from text_embedding import embed_chunks, build_faiss_index
-from retrieval import retrieve_relevant_chunks
-from response_generation import generate_response
+from retriever import retrieve_relevant_chunks
+from response_generator import generate_response
 
 # Setting up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -44,7 +44,7 @@ def main(pdf_path, questions):
 # Example usage
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        logging.error("Invalid number of arguments. Usage: python script.py <pdf_path> <question1> <question2> ...")
+        logging.error("Invalid number of arguments. \nUsage: python script.py <pdf_path> <question1> <question2> ...")
         sys.exit(1)
 
     try:
